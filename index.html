@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Extract · Belleza Total — Conocé nuestras marcas</title>
+<meta name="description" content="Aromaterapia, protección natural, barbería y cuidado de piel tatuada. Pedí información para tu salón o negocio." />
+<style>
+  :root{
+    --ink:#1b1620; --muted:#6c6577; --line:rgba(0,0,0,.10);
+    --bg:#F6F2EC; --card:#ffffff;
+    --exotik:#5B3B96; --aroma:#7E5FB8; --bull:#1f1f22; --bull-gold:#C99A3A; --aelha:#B23A2E;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  .wrap{max-width:560px;margin:0 auto;padding:0 18px}
+  a{color:inherit}
+
+  /* HERO */
+  header.hero{padding:38px 0 26px;text-align:center}
+  .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .extract{font-size:34px;font-weight:800;letter-spacing:1px;margin:6px 0 2px}
+  .extract small{display:block;font-size:11px;letter-spacing:4px;color:var(--aroma);font-weight:600;margin-top:2px}
+  .hero p{color:var(--muted);font-size:15px;margin:14px auto 0;max-width:430px}
+  .evt{display:inline-block;margin-top:16px;font-size:12.5px;background:#fff;border:1px solid var(--line);
+    padding:7px 14px;border-radius:30px;color:var(--muted)}
+
+  /* MARCAS */
+  section{padding:8px 0 6px}
+  h2.sec{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-align:center;margin:26px 0 16px;font-weight:600}
+  .brands{display:grid;gap:12px}
+  .brand{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px 18px 16px;text-decoration:none;display:block;position:relative;overflow:hidden;
+    transition:transform .15s ease, box-shadow .15s ease}
+  .brand:active{transform:scale(.99)}
+  .brand .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+    padding:4px 10px;border-radius:20px;margin-bottom:10px}
+  .brand h3{margin:0 0 4px;font-size:21px;font-weight:800}
+  .brand p{margin:0;color:var(--muted);font-size:14px}
+  .brand .go{margin-top:12px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+  .bar{position:absolute;left:0;top:0;bottom:0;width:6px}
+  .b-aroma .bar{background:var(--aroma)} .b-aroma .tag{background:#efe9f7;color:var(--exotik)}
+  .b-exotik .bar{background:var(--exotik)} .b-exotik .tag{background:#efe9f7;color:var(--exotik)}
+  .b-bull .bar{background:var(--bull-gold)} .b-bull .tag{background:#f3ead5;color:#7a5c1c}
+  .b-aelha .bar{background:var(--aelha)} .b-aelha .tag{background:#f7e5e2;color:var(--aelha)}
+
+  /* FORM */
+  .form-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px 20px 24px;margin-top:8px}
+  .form-card h2{margin:0 0 4px;font-size:22px;font-weight:800}
+  .form-card .lead{color:var(--muted);font-size:14px;margin:0 0 18px}
+  label{display:block;font-size:13px;font-weight:600;margin:14px 0 6px}
+  input,select,textarea{width:100%;font:inherit;font-size:16px;padding:12px 13px;border:1px solid var(--line);
+    border-radius:12px;background:#fff;color:var(--ink);outline:none}
+  input:focus,select:focus,textarea:focus{border-color:var(--aroma);box-shadow:0 0 0 3px rgba(126,95,184,.15)}
+  textarea{min-height:78px;resize:vertical}
+  .checks{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
+  .chk{display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:12px;padding:11px 12px;font-size:13.5px;cursor:pointer}
+  .chk input{width:auto;margin:0;accent-color:var(--exotik)}
+  .chk.on{border-color:var(--exotik);background:#f6f1fb}
+  button.submit{width:100%;margin-top:20px;background:var(--exotik);color:#fff;border:none;border-radius:14px;
+    padding:15px;font-size:16px;font-weight:700;cursor:pointer;transition:opacity .15s}
+  button.submit:active{opacity:.88}
+  .privacy{font-size:11.5px;color:var(--muted);text-align:center;margin-top:12px}
+  .ok{display:none;text-align:center;padding:30px 10px}
+  .ok .check{width:64px;height:64px;border-radius:50%;background:#e8f5ee;color:#1d8a52;display:flex;align-items:center;
+    justify-content:center;margin:0 auto 16px;font-size:32px}
+  .ok h2{font-size:22px;margin:0 0 6px}
+  .ok p{color:var(--muted);font-size:14px;margin:0 auto;max-width:340px}
+  .ok a.store{display:inline-block;margin-top:18px;font-weight:700;color:var(--exotik)}
+
+  footer{text-align:center;color:var(--muted);font-size:12px;padding:30px 0 40px}
+  footer .brandline{font-weight:700;color:var(--ink);letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">Belleza Total · Guatemala</div>
+    <div class="extract">EXTRACT<small>FAMILIA DE MARCAS</small></div>
+    <p>Bienestar natural para tu salón y tu día a día: aromaterapia, protección, barbería y cuidado de la piel tatuada.</p>
+    <span class="evt">📍 Visitá nuestro stand en la feria</span>
+  </header>
+
+  <section>
+    <h2 class="sec">Nuestras marcas</h2>
+    <div class="brands">
+
+      <a class="brand b-aroma" href="https://exotiknat.com" target="_blank" rel="noopener">
+        <span class="bar"></span>
+        <span class="tag">Aromaterapia</span>
+        <h3>Exotik Nat · Aromaterapia</h3>
+        <p>Roll-On y Mist con aceites esenciales 100% puros. Alegría, Respira, Dulces Sueños y Purificante.</p>
+        <span class="go" style="color:var(--exotik)">Ver la línea →</span>
+      </a>
+
+      <a class="brand b-exotik" href="https://exotiknat.com" target="_blank" rel="noopener">
+        <span class="bar"></span>
+        <span class="tag">Protección & cuerpo</span>
+        <h3>Exotik Nat</h3>
+        <p>Protector solar, repelente de citronela, cremas y cuidado corporal de origen natural.</p>
+        <span class="go" style="color:var(--exotik)">Explorar →</span>
+      </a>
+
+      <a class="brand b-bull" href="https://exotiknat.com/collections/black-bull" target="_blank" rel="noopener">
+        <span class="bar"></span>
+        <span class="tag">Barbería</span>
+        <h3>Black Bull</h3>
+        <p>Aceites, bálsamos y kits para barba con aceites esenciales. Aromas Fresh Lumberjack y Herbal Forest.</p>
+        <span class="go" style="color:#7a5c1c">Ver Black Bull →</span>
+      </a>
+
+      <a class="brand b-aelha" href="https://exotiknat.com" target="_blank" rel="noopener">
+        <span class="bar"></span>
+        <span class="tag">Piel tatuada</span>
+        <h3>Aelha</h3>
+        <p>Espuma, bálsamo y crema con FPS 30 para mantener vivo tu arte. Cuidado especializado del tatuaje.</p>
+        <span class="go" style="color:var(--aelha)">Ver Aelha →</span>
+      </a>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Información para tu salón</h2>
+    <div class="form-card" id="card">
+      <form id="leadForm" novalidate>
+        <h2>Del servicio al ritual</h2>
+        <p class="lead">Dejanos tus datos y te contamos cómo sumar nuestras líneas a tu salón o negocio.</p>
+
+        <label for="nombre">Nombre completo *</label>
+        <input id="nombre" name="nombre" required autocomplete="name" />
+
+        <label for="negocio">Salón / negocio</label>
+        <input id="negocio" name="negocio" autocomplete="organization" />
+
+        <label for="tel">Teléfono / WhatsApp *</label>
+        <input id="tel" name="telefono" type="tel" required inputmode="tel" autocomplete="tel" />
+
+        <label for="email">Correo</label>
+        <input id="email" name="email" type="email" autocomplete="email" />
+
+        <label for="perfil">¿Quién sos?</label>
+        <select id="perfil" name="perfil">
+          <option value="">Seleccioná…</option>
+          <option>Dueño/a de salón o spa</option>
+          <option>Barbero/a</option>
+          <option>Esteticista / cosmetóloga</option>
+          <option>Distribuidor / mayorista</option>
+          <option>Consumidor final</option>
+        </select>
+
+        <label>¿Qué líneas te interesan?</label>
+        <div class="checks" id="checks">
+          <label class="chk"><input type="checkbox" name="linea" value="Aromaterapia"> Aromaterapia</label>
+          <label class="chk"><input type="checkbox" name="linea" value="Protección & cuerpo"> Protección & cuerpo</label>
+          <label class="chk"><input type="checkbox" name="linea" value="Black Bull"> Black Bull</label>
+          <label class="chk"><input type="checkbox" name="linea" value="Aelha"> Aelha</label>
+        </div>
+
+        <label for="msg">Mensaje (opcional)</label>
+        <textarea id="msg" name="mensaje" placeholder="Contanos qué necesitás…"></textarea>
+
+        <button class="submit" type="submit">Quiero más información</button>
+        <p class="privacy">Usaremos tus datos solo para contactarte sobre nuestras marcas.</p>
+      </form>
+
+      <div class="ok" id="ok">
+        <div class="check">✓</div>
+        <h2>¡Gracias! 🌿</h2>
+        <p>Recibimos tus datos. Te vamos a contactar muy pronto con la información de las líneas que elegiste.</p>
+        <a class="store" href="https://exotiknat.com" target="_blank" rel="noopener">Mientras tanto, explorá la tienda →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="brandline">EXTRACT</div>
+    Exotik Nat · Black Bull · Aelha — Guatemala
+  </footer>
+
+</div>
+
+<script>
+  // ===== Endpoint de captura de leads =====
+  // Pegá aquí el webhook de Make (o Formspree) para guardar leads en Sheets/CRM.
+  // Si queda vacío, el formulario muestra el "gracias" igual (modo demo).
+  const LEAD_ENDPOINT = "";
+
+  // checkbox visual
+  document.querySelectorAll('.chk input').forEach(i=>{
+    i.addEventListener('change', e=> e.target.closest('.chk').classList.toggle('on', e.target.checked));
+  });
+
+  const form = document.getElementById('leadForm');
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+    const data = Object.fromEntries(new FormData(form).entries());
+    data.lineas = [...form.querySelectorAll('input[name=linea]:checked')].map(c=>c.value).join(', ');
+    data.origen = 'Landing Belleza Total';
+    data.fecha = new Date().toISOString();
+
+    try{
+      if(LEAD_ENDPOINT){
+        await fetch(LEAD_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
+      } else {
+        console.log('LEAD (demo, sin endpoint):', data);
+      }
+    }catch(err){ console.warn('No se pudo enviar, se muestra gracias igual:', err); }
+
+    document.getElementById('leadForm').style.display='none';
+    document.getElementById('ok').style.display='block';
+    document.getElementById('card').scrollIntoView({behavior:'smooth', block:'center'});
+  });
+</script>
+</body>
+</html>
