@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Extract · Belleza Total 2026 — Conocé nuestras marcas y participá</title>
-<meta name="description" content="Aromaterapia, barbería y cuidado de piel tatuada. Seguinos, llená el formulario y girá la ruleta para ganar." />
+<title>Extract · Belleza Total 2026 — Síguenos, juega y gana</title>
+<meta name="description" content="Sigue nuestras marcas, completa tus datos y gira la ruleta para ganar envío gratis o descuentos." />
 <style>
   @font-face{font-family:'Canberra';src:url('assets/fonts/CanberraFY-Bold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
   @font-face{font-family:'Canberra';src:url('assets/fonts/CanberraFY-Book.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
   @font-face{font-family:'Canberra';src:url('assets/fonts/CanberraFY-Italic.ttf') format('truetype');font-weight:400;font-style:italic;font-display:swap}
   @font-face{font-family:'Myriad Pro';src:url('assets/fonts/MyriadPro-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
 
-  :root{--bg:#f8f5e8;--accent:#d8c1d3;--accent-dark:#b892a8;--ink:#111;--muted:#555;--line:rgba(0,0,0,.12);--radius:16px}
+  :root{--bg:#f8f5e8;--accent:#d8c1d3;--accent-dark:#b892a8;--ink:#111;--muted:#555;--line:rgba(0,0,0,.12)}
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
   html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Myriad Pro',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
   img{max-width:100%;display:block}
@@ -19,122 +19,112 @@
   .wrap{max-width:560px;margin:0 auto;padding:0 20px}
   a{color:inherit}
 
-  header.hero{text-align:center;padding:34px 0 22px}
-  .hero .extract-logo{height:48px;width:auto;margin:0 auto 14px}
-  .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);font-weight:400}
-  .hero h1{font-size:26px;margin:12px 0 8px;line-height:1.15}
-  .hero p{color:var(--muted);font-size:15px;margin:0 auto;max-width:430px}
-  .evt{display:inline-block;margin-top:16px;font-size:12.5px;background:#fff;border:1px solid var(--line);padding:7px 16px;border-radius:30px}
-  .evt b{font-weight:400;font-family:'Canberra',serif}
+  /* HERO */
+  .hero{background:linear-gradient(165deg,#fbf8ef 0%,#efe2e9 60%,#e6d2de 100%);border-radius:0 0 26px 26px;padding:22px 22px 30px;text-align:center;position:relative;overflow:hidden}
+  .hero .extract-logo{height:16px;width:auto;margin:0 auto 16px;opacity:.85}
+  .hero .gift{font-size:40px;line-height:1;margin-bottom:6px}
+  .hero h1{font-size:30px;line-height:1.1;margin:4px 0 10px}
+  .hero p{color:#4a3a44;font-size:15px;margin:0 auto 18px;max-width:420px}
+  .cta{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-family:'Canberra',serif;font-weight:700;font-size:17px;padding:14px 26px;border-radius:32px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+  .cta:active{transform:scale(.98)}
+  .evt{display:block;margin-top:16px;font-size:12.5px;color:#5a4751}
 
-  h2.sec{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-align:center;margin:30px 0 16px;font-weight:400}
-
-  .brands{display:grid;gap:13px}
-  .brand{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:relative;overflow:hidden}
-  .brand .bar{position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--accent)}
-  .brand .logo{height:38px;width:auto;margin-bottom:10px}
-  .brand p{margin:0 0 14px;color:var(--muted);font-size:14px}
-  .btns{display:flex;flex-wrap:wrap;gap:8px}
-  .btn{display:inline-block;font-size:13px;font-weight:400;text-decoration:none;padding:9px 15px;border-radius:30px;border:1px solid var(--ink);background:transparent;color:var(--ink);transition:.15s}
-  .btn:active{transform:scale(.98)}
-  .btn.solid{background:var(--accent);border-color:var(--accent)}
+  h2.sec{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-align:center;margin:28px 0 14px;font-weight:400}
 
   .promo{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 20px 24px;margin-top:8px}
   .promo h2{font-size:23px;margin:0 0 4px}
-  .promo .lead{color:var(--muted);font-size:14px;margin:0 0 18px}
-  .steps{display:grid;gap:10px;margin:0 0 20px;padding:0;list-style:none}
+  .promo .lead{color:var(--muted);font-size:14px;margin:0 0 16px}
+  .steps{display:grid;gap:9px;margin:0 0 16px;padding:0;list-style:none}
   .steps li{display:flex;gap:11px;align-items:flex-start;font-size:14px}
-  .steps li .n{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Canberra',serif;font-weight:700;font-size:13px}
+  .steps li .n{flex:0 0 auto;width:23px;height:23px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Canberra',serif;font-weight:700;font-size:13px}
   .ig{display:grid;gap:8px;margin:6px 0 4px}
-  .igbtn{display:flex;align-items:center;gap:10px;justify-content:center;text-decoration:none;border:1px solid var(--ink);border-radius:30px;padding:11px;font-size:14px;font-weight:400}
-  .igbtn svg{width:18px;height:18px;flex:0 0 auto}
+  .igbtn{display:flex;align-items:center;gap:11px;justify-content:flex-start;text-align:left;text-decoration:none;border:1px solid var(--ink);border-radius:14px;padding:11px 14px;font-size:14px;color:var(--ink);transition:.15s}
+  .igbtn .icon{width:20px;height:20px;flex:0 0 auto}
+  .igbtn .tick{margin-left:auto;font-weight:700;color:var(--accent-dark);opacity:0;transition:.15s}
+  .igbtn.done{border-color:var(--accent-dark);background:#faf3f7}
+  .igbtn.done .tick{opacity:1}
   label.fl{display:block;font-size:13px;font-weight:400;margin:16px 0 6px;font-family:'Canberra',serif}
-  input,select,textarea{width:100%;font-family:inherit;font-size:16px;padding:12px 13px;border:1px solid var(--line);border-radius:12px;background:#fffdf7;color:var(--ink);outline:none}
-  input:focus,select:focus,textarea:focus{border-color:var(--accent-dark);box-shadow:0 0 0 3px rgba(216,193,211,.5)}
+  input,select{width:100%;font-family:inherit;font-size:16px;padding:12px 13px;border:1px solid var(--line);border-radius:12px;background:#fffdf7;color:var(--ink);outline:none}
+  input:focus,select:focus{border-color:var(--accent-dark);box-shadow:0 0 0 3px rgba(216,193,211,.5)}
   .checks{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
   .chk{display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:12px;padding:10px 11px;font-size:13px;cursor:pointer}
   .chk.full{grid-column:1/-1}
   .chk input{width:auto;margin:0;accent-color:var(--accent-dark)}
   .chk.on{border-color:var(--accent-dark);background:#faf3f7}
-  button.submit{width:100%;margin-top:20px;background:var(--accent);color:var(--ink);border:1px solid var(--accent-dark);border-radius:30px;padding:15px;font-size:17px;font-weight:700;font-family:'Canberra',serif;cursor:pointer;transition:.15s}
+  button.submit{width:100%;margin-top:20px;background:var(--accent);color:var(--ink);border:1px solid var(--accent-dark);border-radius:30px;padding:15px;font-size:17px;font-weight:700;font-family:'Canberra',serif;cursor:pointer}
   button.submit:active{transform:scale(.99)}
+  .mini{font-size:11.5px;color:var(--muted);text-align:center;margin-top:11px}
 
-  #ruleta{display:none;text-align:center;padding:8px 0 6px}
+  #ruleta{display:none;text-align:center}
   #ruleta h2{font-size:24px;margin:0 0 4px}
-  #ruleta p.lead{color:var(--muted);font-size:14px;margin:0 0 18px}
-  .wheelbox{position:relative;width:300px;max-width:84vw;margin:0 auto}
-  .pointer{position:absolute;top:-6px;left:50%;transform:translateX(-50%);z-index:3;width:0;height:0;border-left:14px solid transparent;border-right:14px solid transparent;border-top:24px solid var(--ink);filter:drop-shadow(0 2px 2px rgba(0,0,0,.25))}
-  #wheel{transition:transform 4.4s cubic-bezier(.17,.67,.16,1);transform:rotate(0deg)}
-  .spinbtn{margin-top:18px;background:var(--ink);color:#fff;border:none;border-radius:30px;padding:14px 30px;font-size:16px;font-weight:700;font-family:'Canberra',serif;cursor:pointer}
+  #ruleta .lead{color:var(--muted);font-size:14px;margin:0 0 16px}
+  .wheelbox{position:relative;width:300px;max-width:82vw;margin:0 auto}
+  .pointer{position:absolute;top:-4px;left:50%;transform:translateX(-50%);z-index:3;width:0;height:0;border-left:14px solid transparent;border-right:14px solid transparent;border-top:24px solid var(--ink);filter:drop-shadow(0 2px 2px rgba(0,0,0,.25))}
+  #wheel{transition:transform 4.6s cubic-bezier(.16,.7,.15,1);transform:rotate(0deg)}
+  .spinbtn{margin-top:18px;background:var(--ink);color:#fff;border:none;border-radius:30px;padding:14px 34px;font-size:16px;font-weight:700;font-family:'Canberra',serif;cursor:pointer}
   .spinbtn:disabled{opacity:.4}
-  #result{display:none;margin-top:18px;background:#fffdf7;border:1px solid var(--accent-dark);border-radius:16px;padding:20px}
+  #result{display:none;margin-top:18px;background:#fffdf7;border:1px solid var(--accent-dark);border-radius:16px;padding:22px 18px}
   #result .em{font-size:34px}
-  #result h3{font-size:21px;margin:8px 0 6px}
-  #result p{color:var(--muted);font-size:14px;margin:0}
+  #result h3{font-size:21px;margin:8px 0 4px}
+  #result p{color:var(--muted);font-size:14px;margin:0 0 4px}
+  .code{margin:14px auto 4px;display:inline-block;font-family:'Canberra',serif;font-weight:700;font-size:20px;letter-spacing:1px;background:var(--accent);border:1px dashed var(--accent-dark);border-radius:12px;padding:10px 20px}
+  .copyhint{font-size:11.5px;color:var(--muted)}
+  .ghost-btn{margin-top:16px;display:inline-block;background:transparent;border:1px solid var(--ink);color:var(--ink);border-radius:30px;padding:12px 22px;font-size:14px;font-family:'Canberra',serif;font-weight:700;cursor:pointer;text-decoration:none}
 
-  .ok{display:none;text-align:center;padding:30px 10px}
+  /* MARCAS desplegable */
+  .acc{width:100%;display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-family:'Canberra',serif;font-weight:700;font-size:16px;cursor:pointer;color:var(--ink)}
+  .acc .arr{transition:.2s;color:var(--accent-dark)}
+  .acc.open .arr{transform:rotate(180deg)}
+  .brands{display:none;gap:13px;margin-top:13px}
+  .brands.open{display:grid}
+  .brand{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;position:relative;overflow:hidden}
+  .brand .bar{position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--accent)}
+  .brand .logo{height:38px;width:auto;margin-bottom:10px}
+  .brand .logo.bb{height:32px}      /* Black Bull −16% */
+  .brand .logo.ae{height:34px}      /* Aelha −10% */
+  .brand p{margin:0 0 14px;color:var(--muted);font-size:14px}
+  .btns{display:flex;flex-wrap:wrap;gap:8px}
+  .btn{display:inline-block;font-size:13px;text-decoration:none;padding:9px 15px;border-radius:30px;border:1px solid var(--ink);background:transparent;color:var(--ink)}
+  .btn.solid{background:var(--accent);border-color:var(--accent)}
 
   footer{text-align:center;color:var(--muted);font-size:12px;padding:30px 0 42px;line-height:1.7}
-  footer .ex{font-family:'Canberra',serif;font-weight:700;color:var(--ink);letter-spacing:1px;font-size:14px}
+  .footlogos{display:flex;gap:18px;justify-content:center;align-items:center;margin-bottom:14px;opacity:.75}
+  .footlogos img{height:18px;width:auto}
+  footer .ex{font-family:'Canberra',serif;font-weight:700;color:var(--ink);letter-spacing:1px;font-size:13px}
   footer a{color:var(--accent-dark)}
 </style>
 </head>
 <body>
+
+<header class="hero">
+  <img class="extract-logo" src="assets/extract.svg" alt="Extract">
+  <div class="gift">🎁</div>
+  <h1>Síguenos, juega y gana</h1>
+  <p>Sigue nuestras marcas, completa tus datos y gira la ruleta. Puedes ganar <b>envío gratis</b>, <b>5%</b> o <b>10%</b> de descuento.</p>
+  <a class="cta" href="#participar">Quiero participar →</a>
+  <span class="evt">📍 Belleza Total · Guatemala 2026</span>
+</header>
+
 <div class="wrap">
 
-  <header class="hero">
-    <img class="extract-logo" src="assets/extract.svg" alt="Extract">
-    <div class="kicker">Familia de marcas</div>
-    <h1>Del servicio al ritual de bienestar</h1>
-    <p>Aromaterapia, barbería y cuidado de la piel tatuada — cosmética natural guatemalteca.</p>
-    <span class="evt">📍 <b>Belleza Total · Guatemala 2026</b></span>
-  </header>
-
-  <section>
-    <h2 class="sec">Nuestras marcas</h2>
-    <div class="brands">
-      <div class="brand">
-        <span class="bar"></span>
-        <img class="logo" src="assets/exotik.svg" alt="Exotik Nat">
-        <p>Aromaterapia (roll-on, mist, aceites esenciales y difusores), protección solar, repelente y cuidado corporal de origen natural.</p>
-        <div class="btns">
-          <a class="btn solid" href="https://exotiknat.com/collections/aromaterapia" target="_blank" rel="noopener">Aromaterapia</a>
-          <a class="btn" href="https://exotiknat.com" target="_blank" rel="noopener">Ver tienda</a>
-        </div>
-      </div>
-      <div class="brand">
-        <span class="bar"></span>
-        <img class="logo" src="assets/blackbull.svg" alt="Black Bull">
-        <p>Barba, cabello y piel para hombres: aceites, bálsamos, pomadas y kits con aceites esenciales.</p>
-        <div class="btns"><a class="btn solid" href="https://exotiknat.com/collections/black-bull" target="_blank" rel="noopener">Ver Black Bull</a></div>
-      </div>
-      <div class="brand">
-        <span class="bar"></span>
-        <img class="logo" src="assets/aelha.svg" alt="Aelha">
-        <p>Cuidado especializado de la piel tatuada: espuma, bálsamo y crema con FPS 30. Mantené vivo tu arte.</p>
-        <div class="btns"><a class="btn solid" href="https://exotiknat.com/collections/aelha-care" target="_blank" rel="noopener">Ver Aelha</a></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="sec">Participá y ganá</h2>
+  <section id="participar">
+    <h2 class="sec">Participa y gana</h2>
     <div class="promo" id="card">
 
       <form id="leadForm" novalidate>
-        <h2>Girá la ruleta y ganá</h2>
-        <p class="lead">Completá estos pasos y al enviar girás la ruleta para ganar un premio especial.</p>
+        <h2>Gira la ruleta y gana</h2>
+        <p class="lead">Completa estos pasos y al enviar girarás la ruleta para ganar tu premio.</p>
 
         <ol class="steps">
-          <li><span class="n">1</span><span>Seguinos en Instagram en las 3 marcas (botones abajo).</span></li>
-          <li><span class="n">2</span><span>Llená tus datos.</span></li>
-          <li><span class="n">3</span><span>Tocá <b>Enviar y Participar</b> y girá la ruleta.</span></li>
+          <li><span class="n">1</span><span>Síguenos en Instagram en las 3 marcas (toca cada botón).</span></li>
+          <li><span class="n">2</span><span>Llena tus datos.</span></li>
+          <li><span class="n">3</span><span>Toca <b>Enviar y Participar</b> y gira la ruleta.</span></li>
         </ol>
 
         <div class="ig">
-          <a class="igbtn" href="https://instagram.com/exotik_nat" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg> Seguir @Exotik_Nat</a>
-          <a class="igbtn" href="https://instagram.com/aelhacare" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg> Seguir @Aelhacare</a>
-          <a class="igbtn" href="https://instagram.com/blackbull.mencare" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg> Seguir @Blackbull.mencare</a>
+          <a class="igbtn" data-ig="exotik" href="https://instagram.com/exotik_nat" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg> Seguir @Exotik_Nat <span class="tick">✓</span></a>
+          <a class="igbtn" data-ig="aelha" href="https://instagram.com/aelhacare" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg> Seguir @Aelhacare <span class="tick">✓</span></a>
+          <a class="igbtn" data-ig="bb" href="https://instagram.com/blackbull.mencare" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg> Seguir @Blackbull.mencare <span class="tick">✓</span></a>
         </div>
 
         <label class="fl" for="nombre">Nombre completo *</label>
@@ -145,9 +135,9 @@
         <input id="tel" name="telefono" type="tel" required inputmode="tel" autocomplete="tel">
         <label class="fl" for="email">Correo *</label>
         <input id="email" name="email" type="email" required autocomplete="email">
-        <label class="fl" for="perfil">¿Quién sos?</label>
+        <label class="fl" for="perfil">¿Quién eres?</label>
         <select id="perfil" name="perfil">
-          <option value="">Seleccioná…</option>
+          <option value="">Selecciona…</option>
           <option>Dueño/a de salón o spa</option><option>Barbero/a</option>
           <option>Esteticista / cosmetóloga</option><option>Distribuidor / mayorista</option>
           <option>Consumidor final</option>
@@ -163,26 +153,64 @@
         </div>
 
         <button class="submit" type="submit">Enviar y Participar</button>
-        <p class="mini" style="font-size:11.5px;color:var(--muted);text-align:center;margin-top:11px">Al participar aceptás recibir información de nuestras marcas. El seguimiento se verifica en el stand al reclamar el premio.</p>
+        <p class="mini">Al participar aceptas recibir información de nuestras marcas. Verificamos el seguimiento en el stand al reclamar tu premio.</p>
       </form>
 
       <div id="ruleta">
-        <h2>¡Girá la ruleta! 🎁</h2>
-        <p class="lead">Tocá el botón y descubrí tu premio.</p>
+        <h2>¡Gira la ruleta! 🎁</h2>
+        <p class="lead">Toca el botón y descubre tu premio.</p>
         <div class="wheelbox">
           <div class="pointer"></div>
           <svg id="wheel" viewBox="0 0 300 300" width="300" height="300" aria-label="Ruleta de premios"></svg>
         </div>
         <button class="spinbtn" id="spin">Girar</button>
-        <div id="result"><div class="em">🎉</div><h3 id="rTitle"></h3><p id="rDesc"></p></div>
+        <div id="result">
+          <div class="em" id="rEmoji">🎉</div>
+          <h3 id="rTitle"></h3>
+          <p id="rDesc"></p>
+          <div class="code" id="rCode" style="display:none"></div>
+          <div class="copyhint" id="rHint" style="display:none">Toca el código para copiarlo · o muéstralo en el stand</div>
+          <div><button class="ghost-btn" id="verMarcas">Conoce nuestras marcas →</button></div>
+        </div>
       </div>
 
     </div>
   </section>
 
+  <section>
+    <button class="acc" id="marcasToggle">Conoce nuestras marcas <span class="arr">▾</span></button>
+    <div class="brands" id="marcasPanel">
+      <div class="brand">
+        <span class="bar"></span>
+        <img class="logo" src="assets/exotik.svg" alt="Exotik Nat">
+        <p>Aromaterapia (roll-on, mist, aceites esenciales y difusores), protección solar, repelente y cuidado corporal de origen natural.</p>
+        <div class="btns">
+          <a class="btn solid" href="https://exotiknat.com/collections/aromaterapia" target="_blank" rel="noopener">Aromaterapia</a>
+          <a class="btn" href="https://exotiknat.com" target="_blank" rel="noopener">Ver tienda</a>
+        </div>
+      </div>
+      <div class="brand">
+        <span class="bar"></span>
+        <img class="logo bb" src="assets/blackbull.svg" alt="Black Bull">
+        <p>Barba, cabello y piel para hombres: aceites, bálsamos, pomadas y kits con aceites esenciales.</p>
+        <div class="btns"><a class="btn solid" href="https://exotiknat.com/collections/black-bull" target="_blank" rel="noopener">Ver Black Bull</a></div>
+      </div>
+      <div class="brand">
+        <span class="bar"></span>
+        <img class="logo ae" src="assets/aelha.svg" alt="Aelha">
+        <p>Cuidado especializado de la piel tatuada: espuma, bálsamo y crema con FPS 30. Mantén vivo tu arte.</p>
+        <div class="btns"><a class="btn solid" href="https://exotiknat.com/collections/aelha-care" target="_blank" rel="noopener">Ver Aelha</a></div>
+      </div>
+    </div>
+  </section>
+
   <footer>
+    <div class="footlogos">
+      <img src="assets/exotik.svg" alt="Exotik Nat">
+      <img src="assets/blackbull.svg" alt="Black Bull">
+      <img src="assets/aelha.svg" alt="Aelha">
+    </div>
     <div class="ex">EXTRACT</div>
-    Exotik Nat · Black Bull · Aelha<br>
     Promoción válida durante Belleza Total · Guatemala 2026. Sujeta a los términos del stand.<br>
     Una marca de Extract — <a href="https://www.cardamomoil.com/es/home" target="_blank" rel="noopener">cardamomoil.com</a>
   </footer>
@@ -190,24 +218,37 @@
 </div>
 
 <script>
-  const LEAD_ENDPOINT = ""; // pegar webhook Make/Formspree; vacío = demo
+  const LEAD_ENDPOINT = ""; // pega aquí la URL del Web App de Apps Script (Google Sheets)
 
+  // checkbox visual
   document.querySelectorAll('.chk input').forEach(i=>{
-    const w=i.closest('.chk'); const sync=()=>w.classList.toggle('on',i.checked); sync();
-    i.addEventListener('change',sync);
+    const w=i.closest('.chk');const sync=()=>w.classList.toggle('on',i.checked);sync();i.addEventListener('change',sync);
   });
 
-  // ===== Ruleta (10 segmentos ponderados: Envío x4, ¡Suerte! x3, 5% x2, 10% x1) =====
+  // ===== Seguir IG: marca al tocar, abre la app (mismo tab, universal link), guarda estado =====
+  const visited=JSON.parse(sessionStorage.getItem('igVisited')||'{}');
+  function refreshIg(){
+    document.querySelectorAll('.igbtn').forEach(b=>{ if(visited[b.dataset.ig]) b.classList.add('done'); });
+    if(['exotik','aelha','bb'].every(k=>visited[k])){ const c=document.getElementById('igChk'); c.checked=true; c.dispatchEvent(new Event('change')); }
+  }
+  document.querySelectorAll('.igbtn').forEach(b=>{
+    b.addEventListener('click',()=>{ visited[b.dataset.ig]=true; sessionStorage.setItem('igVisited',JSON.stringify(visited)); b.classList.add('done'); setTimeout(refreshIg,50); });
+  });
+  refreshIg();
+
+  // ===== Ruleta (4 divisiones, resultado ponderado por cantidad) =====
   const SEG=[
-    {k:'envio',t:'Envío gratis'},{k:'suerte',t:'¡Suerte!'},{k:'d5',t:'5% OFF'},
-    {k:'envio',t:'Envío gratis'},{k:'suerte',t:'¡Suerte!'},{k:'envio',t:'Envío gratis'},
-    {k:'d10',t:'10% OFF'},{k:'suerte',t:'¡Suerte!'},{k:'d5',t:'5% OFF'},{k:'envio',t:'Envío gratis'}
+    {k:'envio',t:'Envío gratis'},
+    {k:'d5',t:'5% OFF'},
+    {k:'suerte',t:'¡Suerte!'},
+    {k:'d10',t:'10% OFF'}
   ];
+  const WEIGHT={envio:45,suerte:30,d5:18,d10:7}; // cantidad: envío > suerte > 5% > 10%
   const PRIZE={
-    envio:{title:'¡Envío Gratis! 🚚',desc:'Ganaste envío gratis en tu siguiente pedido con cupón para la tienda en línea.'},
-    suerte:{title:'¡Gracias por participar! 🌿',desc:'Esta vez no hubo premio, pero seguinos para futuras promos y sorteos.'},
-    d5:{title:'¡5% de descuento! 🎉',desc:'5% de descuento adicional con cupón en la tienda en línea o directamente en el evento.'},
-    d10:{title:'¡10% de descuento! 🎉',desc:'10% de descuento adicional con cupón en la tienda en línea o directamente en el evento.'}
+    envio:{emoji:'🚚',label:'Envío gratis',code:'BELLEZAENVIO',desc:'Envío gratis en tu siguiente pedido en la tienda en línea.'},
+    d5:{emoji:'🎉',label:'5% de descuento',code:'BELLEZA5',desc:'5% de descuento adicional en la tienda en línea o en el evento.'},
+    d10:{emoji:'🎉',label:'10% de descuento',code:'BELLEZA10',desc:'10% de descuento adicional en la tienda en línea o en el evento.'},
+    suerte:{emoji:'🌿',label:null}
   };
   const N=SEG.length,SEGDEG=360/N,R=150,cx=150,cy=150;
   const wheel=document.getElementById('wheel');
@@ -216,42 +257,57 @@
     const a0=i*SEGDEG,a1=(i+1)*SEGDEG;const[x0,y0]=pt(a0,R),[x1,y1]=pt(a1,R);
     const p=document.createElementNS('http://www.w3.org/2000/svg','path');
     p.setAttribute('d',`M${cx},${cy} L${x0},${y0} A${R},${R} 0 0 1 ${x1},${y1} Z`);
-    p.setAttribute('fill', i%2? '#d8c1d3':'#f8f5e8');
-    p.setAttribute('stroke','#111');p.setAttribute('stroke-width','1');wheel.appendChild(p);
-    const[tx,ty]=pt(a0+SEGDEG/2,R*0.64);
+    p.setAttribute('fill', i%2? '#d8c1d3':'#f8f5e8');p.setAttribute('stroke','#111');p.setAttribute('stroke-width','1');wheel.appendChild(p);
+    const[tx,ty]=pt(a0+SEGDEG/2,R*0.62);
     const tEl=document.createElementNS('http://www.w3.org/2000/svg','text');
-    tEl.setAttribute('x',tx);tEl.setAttribute('y',ty);tEl.setAttribute('fill','#111');
-    tEl.setAttribute('font-size','11');tEl.setAttribute('font-family','Canberra, Georgia, serif');tEl.setAttribute('font-weight','700');
+    tEl.setAttribute('x',tx);tEl.setAttribute('y',ty);tEl.setAttribute('fill','#111');tEl.setAttribute('font-size','15');
+    tEl.setAttribute('font-family','Canberra, Georgia, serif');tEl.setAttribute('font-weight','700');
     tEl.setAttribute('text-anchor','middle');tEl.setAttribute('dominant-baseline','middle');
     tEl.setAttribute('transform',`rotate(${a0+SEGDEG/2} ${tx} ${ty})`);tEl.textContent=s.t;wheel.appendChild(tEl);
   });
   const hub=document.createElementNS('http://www.w3.org/2000/svg','circle');
-  hub.setAttribute('cx',cx);hub.setAttribute('cy',cy);hub.setAttribute('r','22');hub.setAttribute('fill','#111');wheel.appendChild(hub);
+  hub.setAttribute('cx',cx);hub.setAttribute('cy',cy);hub.setAttribute('r','24');hub.setAttribute('fill','#111');wheel.appendChild(hub);
+
+  function pickKey(){const tot=Object.values(WEIGHT).reduce((a,b)=>a+b,0);let r=Math.random()*tot;for(const k in WEIGHT){r-=WEIGHT[k];if(r<0)return k;}return 'suerte';}
 
   let spun=false;const spinBtn=document.getElementById('spin');
   spinBtn.addEventListener('click',()=>{
     if(spun)return;spun=true;spinBtn.disabled=true;
-    const idx=Math.floor(Math.random()*N);
+    const key=pickKey();const idx=SEG.findIndex(s=>s.k===key);
     const center=idx*SEGDEG+SEGDEG/2;
     wheel.style.transform=`rotate(${360*6-center}deg)`;
-    const prize=PRIZE[SEG[idx].k];
-    setTimeout(()=>{
-      document.getElementById('rTitle').textContent=prize.title;
-      document.getElementById('rDesc').textContent=prize.desc;
-      document.getElementById('result').style.display='block';
-      sendLead(prize.title);
-    },4600);
+    setTimeout(()=>showResult(key),4700);
   });
 
-  function sendLead(premio){
+  function showResult(key){
+    const p=PRIZE[key];const nombre=(document.getElementById('nombre').value||'').trim().split(' ')[0]||'';
+    const res=document.getElementById('result');
+    document.getElementById('rEmoji').textContent=p.label?'🎉':'🌿';
+    if(p.label){
+      document.getElementById('rTitle').textContent=`¡Felicidades${nombre?', '+nombre:''}! 🎉`;
+      document.getElementById('rDesc').innerHTML=`Ganaste: <b>${p.label}</b> ${p.emoji}<br>${p.desc}`;
+      const cEl=document.getElementById('rCode');cEl.textContent=p.code;cEl.style.display='inline-block';
+      document.getElementById('rHint').style.display='block';
+      cEl.onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(p.code);cEl.textContent=p.code+' ✓';};
+    }else{
+      document.getElementById('rTitle').textContent=`¡Gracias por participar${nombre?', '+nombre:''}!`;
+      document.getElementById('rDesc').textContent='Esta vez no hubo premio, pero síguenos para más promos y sorteos.';
+    }
+    res.style.display='block';
+    sendLead(key,p);
+  }
+
+  function sendLead(key,p){
     const f=document.getElementById('leadForm');
     const data=Object.fromEntries(new FormData(f).entries());
     data.lineas=[...f.querySelectorAll('input[name=linea]:checked')].map(c=>c.value).join(', ');
-    data.premio=premio;data.origen='Landing Belleza Total 2026';data.fecha=new Date().toISOString();
-    try{ if(LEAD_ENDPOINT) fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+    data.premio=p.label||'Gracias por participar';data.codigo=p.code||'';
+    data.origen='Landing Belleza Total 2026';data.fecha=new Date().toISOString();
+    try{ if(LEAD_ENDPOINT) fetch(LEAD_ENDPOINT,{method:'POST',body:JSON.stringify(data)});
       else console.log('LEAD (demo):',data); }catch(e){console.warn(e);}
   }
 
+  // ===== Envío del formulario → ruleta =====
   const form=document.getElementById('leadForm');
   form.addEventListener('submit',(e)=>{
     e.preventDefault();
@@ -260,6 +316,12 @@
     document.getElementById('ruleta').style.display='block';
     document.getElementById('card').scrollIntoView({behavior:'smooth',block:'start'});
   });
+
+  // ===== Marcas desplegable =====
+  const accBtn=document.getElementById('marcasToggle'),panel=document.getElementById('marcasPanel');
+  function toggleMarcas(open){const o=open!==undefined?open:!panel.classList.contains('open');panel.classList.toggle('open',o);accBtn.classList.toggle('open',o);}
+  accBtn.addEventListener('click',()=>toggleMarcas());
+  document.getElementById('verMarcas').addEventListener('click',()=>{toggleMarcas(true);panel.scrollIntoView({behavior:'smooth',block:'start'});});
 </script>
 </body>
 </html>
