@@ -20,9 +20,10 @@
   a{color:inherit}
 
   /* HERO */
-  .hero{background:linear-gradient(165deg,#fbf8ef 0%,#efe2e9 60%,#e6d2de 100%);border-radius:0 0 26px 26px;padding:22px 22px 30px;text-align:center;position:relative;overflow:hidden}
-  .hero .extract-logo{height:16px;width:auto;margin:0 auto 16px;opacity:.85}
-  .hero .gift{font-size:40px;line-height:1;margin-bottom:6px}
+  .hero{background:linear-gradient(165deg,#fbf8ef 0%,#efe2e9 60%,#e6d2de 100%);border-radius:0 0 26px 26px;padding:0 0 30px;text-align:center;position:relative;overflow:hidden}
+  .hero .herophoto{width:100%;height:clamp(220px,44vh,380px);object-fit:cover;object-position:center 28%;display:block;margin-bottom:18px}
+  .hero .herotext{padding:0 22px}
+  .hero .extract-logo{height:16px;width:auto;margin:0 auto 14px;opacity:.85}
   .hero h1{font-size:30px;line-height:1.1;margin:4px 0 10px}
   .hero p{color:#4a3a44;font-size:15px;margin:0 auto 18px;max-width:420px}
   .cta{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-family:'Canberra',serif;font-weight:700;font-size:17px;padding:14px 26px;border-radius:32px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
@@ -91,18 +92,21 @@
   .footlogos{display:flex;gap:18px;justify-content:center;align-items:center;margin-bottom:14px;opacity:.75}
   .footlogos img{height:18px;width:auto}
   footer .ex{font-family:'Canberra',serif;font-weight:700;color:var(--ink);letter-spacing:1px;font-size:13px}
+  .extract-foot{height:16px;width:auto;margin:0 auto 8px}
   footer a{color:var(--accent-dark)}
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <img class="extract-logo" src="assets/extract.svg" alt="Extract">
-  <div class="gift">🎁</div>
-  <h1>Síguenos, juega y gana</h1>
-  <p>Sigue nuestras marcas, completa tus datos y gira la ruleta. Puedes ganar <b>envío gratis</b>, <b>5%</b> o <b>10%</b> de descuento.</p>
-  <a class="cta" href="#participar">Quiero participar →</a>
-  <span class="evt">📍 Belleza Total · Guatemala 2026</span>
+  <img class="herophoto" src="assets/hero.jpg" alt="" onerror="this.remove()">
+  <div class="herotext">
+    <img class="extract-logo" src="assets/extract.svg" alt="Extract">
+    <h1>Síguenos, juega y gana</h1>
+    <p>Gana grandes premios.</p>
+    <a class="cta" href="#participar">Quiero participar →</a>
+    <span class="evt">📍 Belleza Total · Guatemala 2026</span>
+  </div>
 </header>
 
 <div class="wrap">
@@ -210,7 +214,7 @@
       <img src="assets/blackbull.svg" alt="Black Bull">
       <img src="assets/aelha.svg" alt="Aelha">
     </div>
-    <div class="ex">EXTRACT</div>
+    <img class="extract-foot" src="assets/extract-negro.svg" alt="Extract">
     Promoción válida durante Belleza Total · Guatemala 2026. Sujeta a los términos del stand.<br>
     Una marca de Extract — <a href="https://www.cardamomoil.com/es/home" target="_blank" rel="noopener">cardamomoil.com</a>
   </footer>
@@ -236,12 +240,16 @@
   });
   refreshIg();
 
-  // ===== Ruleta (4 divisiones, resultado ponderado por cantidad) =====
+  // ===== Ruleta (8 divisiones, resultado ponderado por cantidad) =====
   const SEG=[
     {k:'envio',t:'Envío gratis'},
     {k:'d5',t:'5% OFF'},
-    {k:'suerte',t:'¡Suerte!'},
-    {k:'d10',t:'10% OFF'}
+    {k:'suerte',t:'¡Buen intento!'},
+    {k:'envio',t:'Envío gratis'},
+    {k:'d10',t:'10% OFF'},
+    {k:'suerte',t:'¡Buen intento!'},
+    {k:'d5',t:'5% OFF'},
+    {k:'envio',t:'Envío gratis'}
   ];
   const WEIGHT={envio:45,suerte:30,d5:18,d10:7}; // cantidad: envío > suerte > 5% > 10%
   const PRIZE={
@@ -258,12 +266,13 @@
     const p=document.createElementNS('http://www.w3.org/2000/svg','path');
     p.setAttribute('d',`M${cx},${cy} L${x0},${y0} A${R},${R} 0 0 1 ${x1},${y1} Z`);
     p.setAttribute('fill', i%2? '#d8c1d3':'#f8f5e8');p.setAttribute('stroke','#111');p.setAttribute('stroke-width','1');wheel.appendChild(p);
-    const[tx,ty]=pt(a0+SEGDEG/2,R*0.62);
+    const ang=a0+SEGDEG/2, flip=ang>90&&ang<270;
+    const[tx,ty]=pt(ang,R*0.56);
     const tEl=document.createElementNS('http://www.w3.org/2000/svg','text');
-    tEl.setAttribute('x',tx);tEl.setAttribute('y',ty);tEl.setAttribute('fill','#111');tEl.setAttribute('font-size','15');
+    tEl.setAttribute('x',tx);tEl.setAttribute('y',ty);tEl.setAttribute('fill','#111');tEl.setAttribute('font-size','13');
     tEl.setAttribute('font-family','Canberra, Georgia, serif');tEl.setAttribute('font-weight','700');
     tEl.setAttribute('text-anchor','middle');tEl.setAttribute('dominant-baseline','middle');
-    tEl.setAttribute('transform',`rotate(${a0+SEGDEG/2} ${tx} ${ty})`);tEl.textContent=s.t;wheel.appendChild(tEl);
+    tEl.setAttribute('transform',`rotate(${flip?ang+90:ang-90} ${tx} ${ty})`);tEl.textContent=s.t;wheel.appendChild(tEl);
   });
   const hub=document.createElementNS('http://www.w3.org/2000/svg','circle');
   hub.setAttribute('cx',cx);hub.setAttribute('cy',cy);hub.setAttribute('r','24');hub.setAttribute('fill','#111');wheel.appendChild(hub);
@@ -273,7 +282,7 @@
   let spun=false;const spinBtn=document.getElementById('spin');
   spinBtn.addEventListener('click',()=>{
     if(spun)return;spun=true;spinBtn.disabled=true;
-    const key=pickKey();const idx=SEG.findIndex(s=>s.k===key);
+    const key=pickKey();const idxs=SEG.map((s,i)=>s.k===key?i:-1).filter(i=>i>=0);const idx=idxs[Math.floor(Math.random()*idxs.length)];
     const center=idx*SEGDEG+SEGDEG/2;
     wheel.style.transform=`rotate(${360*6-center}deg)`;
     setTimeout(()=>showResult(key),4700);
