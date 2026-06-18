@@ -52,6 +52,14 @@
   .chk.full{grid-column:1/-1}
   .chk input{width:auto;margin:0;accent-color:var(--accent-dark)}
   .chk.on{border-color:var(--accent-dark);background:#faf3f7}
+  .igfollow{display:flex;align-items:center;gap:12px;margin-top:18px;padding:14px 16px;border:2px solid var(--accent-dark);border-radius:16px;background:#f6e8f0;cursor:pointer}
+  .igfollow input{width:22px;height:22px;margin:0;flex:0 0 auto;accent-color:var(--accent-dark)}
+  .igfollow .t{display:flex;flex-direction:column;line-height:1.25}
+  .igfollow .t b{font-family:'Canberra',serif;font-weight:700;font-size:14px}
+  .igfollow .t small{font-size:11.5px;color:var(--muted)}
+  .igfollow .tick{margin-left:auto;color:var(--accent-dark);font-size:18px;font-weight:700;opacity:.3;transition:.15s}
+  .igfollow.on{background:#efd9e7}
+  .igfollow.on .tick{opacity:1}
   button.submit{width:100%;margin-top:20px;background:var(--accent);color:var(--ink);border:1px solid var(--accent-dark);border-radius:30px;padding:15px;font-size:17px;font-weight:700;font-family:'Canberra',serif;cursor:pointer}
   button.submit:active{transform:scale(.99)}
   .mini{font-size:11.5px;color:var(--muted);text-align:center;margin-top:11px}
@@ -149,12 +157,19 @@
 
         <label class="fl">¿Qué líneas te interesan?</label>
         <div class="checks">
-          <label class="chk"><input type="checkbox" name="linea" value="Aromaterapia"> Aromaterapia</label>
-          <label class="chk"><input type="checkbox" name="linea" value="Protección & cuerpo"> Protección & cuerpo</label>
+          <label class="chk"><input type="checkbox" name="linea" value="Exotik Nat"> Exotik Nat</label>
           <label class="chk"><input type="checkbox" name="linea" value="Black Bull"> Black Bull</label>
           <label class="chk"><input type="checkbox" name="linea" value="Aelha"> Aelha</label>
-          <label class="chk full"><input type="checkbox" id="igChk" required> Ya sigo a @Exotik_Nat, @Aelhacare y @Blackbull.mencare *</label>
+          <label class="chk"><input type="checkbox" name="linea" value="Maquila de productos"> Maquila de productos</label>
+          <label class="chk full"><input type="checkbox" id="otroChk" name="linea" value="Otro"> Otro</label>
         </div>
+        <input id="otroTxt" name="otro" placeholder="Contanos qué te interesa…" style="display:none;margin-top:8px">
+
+        <label class="igfollow" id="igFollow">
+          <input type="checkbox" id="igChk" required>
+          <span class="t"><b>Ya sigo las 3 marcas en Instagram</b><small>@Exotik_Nat · @Aelhacare · @Blackbull.mencare</small></span>
+          <span class="tick">✓</span>
+        </label>
 
         <button class="submit" type="submit">Enviar y Participar</button>
         <p class="mini">Al participar aceptas recibir información de nuestras marcas. Verificamos el seguimiento en el stand al reclamar tu premio.</p>
@@ -225,6 +240,13 @@
   document.querySelectorAll('.chk input').forEach(i=>{
     const w=i.closest('.chk');const sync=()=>w.classList.toggle('on',i.checked);sync();i.addEventListener('change',sync);
   });
+  // bloque "Ya sigo" (distinto a las líneas)
+  const igChk=document.getElementById('igChk'),igFollow=document.getElementById('igFollow');
+  const syncIg=()=>igFollow.classList.toggle('on',igChk.checked);
+  igChk.addEventListener('change',syncIg);syncIg();
+  // campo de texto de "Otro"
+  const otroChk=document.getElementById('otroChk'),otroTxt=document.getElementById('otroTxt');
+  otroChk.addEventListener('change',()=>{otroTxt.style.display=otroChk.checked?'block':'none';if(!otroChk.checked)otroTxt.value='';});
 
   // ===== Seguir IG: marca al tocar, abre la app (mismo tab, universal link), guarda estado =====
   const visited=JSON.parse(sessionStorage.getItem('igVisited')||'{}');
