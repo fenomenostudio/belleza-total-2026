@@ -21,9 +21,9 @@
 
   /* HERO */
   .hero{background:linear-gradient(165deg,#fbf8ef 0%,#efe2e9 60%,#e6d2de 100%);border-radius:0 0 26px 26px;padding:0 0 30px;text-align:center;position:relative;overflow:hidden}
-  .hero .herophoto{width:100%;height:clamp(220px,44vh,380px);object-fit:cover;object-position:center 28%;display:block;margin-bottom:18px}
-  .hero .herotext{padding:0 22px}
-  .hero .extract-logo{height:16px;width:auto;margin:0 auto 14px;opacity:.85}
+  .hero .herophoto{width:100%;height:clamp(220px,44vh,380px);object-fit:cover;object-position:center 32%;display:block;margin-bottom:18px}
+  .hero .herotext{padding:20px 22px 4px}
+  .hero .hlogo{height:36px;width:auto;margin:0 auto 12px}
   .hero h1{font-size:30px;line-height:1.1;margin:4px 0 10px}
   .hero p{color:#4a3a44;font-size:15px;margin:0 auto 18px;max-width:420px}
   .cta{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-family:'Canberra',serif;font-weight:700;font-size:17px;padding:14px 26px;border-radius:32px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
@@ -73,13 +73,15 @@
   .ghost-btn{margin-top:16px;display:inline-block;background:transparent;border:1px solid var(--ink);color:var(--ink);border-radius:30px;padding:12px 22px;font-size:14px;font-family:'Canberra',serif;font-weight:700;cursor:pointer;text-decoration:none}
 
   /* MARCAS desplegable */
+  .marcas{margin-top:16px}
   .acc{width:100%;display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-family:'Canberra',serif;font-weight:700;font-size:16px;cursor:pointer;color:var(--ink)}
+  .acc.open{border-radius:16px 16px 0 0}
   .acc .arr{transition:.2s;color:var(--accent-dark)}
   .acc.open .arr{transform:rotate(180deg)}
-  .brands{display:none;gap:13px;margin-top:13px}
-  .brands.open{display:grid}
-  .brand{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;position:relative;overflow:hidden}
-  .brand .bar{position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--accent)}
+  .brands{display:none;background:#fff;border:1px solid var(--line);border-top:0;border-radius:0 0 16px 16px;overflow:hidden}
+  .brands.open{display:block}
+  .brand{padding:18px}
+  .brand+.brand{border-top:1px solid var(--line)}
   .brand .logo{height:38px;width:auto;margin-bottom:10px}
   .brand .logo.bb{height:32px}      /* Black Bull −16% */
   .brand .logo.ae{height:34px}      /* Aelha −10% */
@@ -90,21 +92,19 @@
 
   footer{text-align:center;color:var(--muted);font-size:12px;padding:30px 0 42px;line-height:1.7}
   .footlogos{display:flex;gap:18px;justify-content:center;align-items:center;margin-bottom:14px;opacity:.75}
-  .footlogos img{height:18px;width:auto}
+  .footlogos img{height:16px;width:auto}
   footer .ex{font-family:'Canberra',serif;font-weight:700;color:var(--ink);letter-spacing:1px;font-size:13px}
-  .extract-foot{height:16px;width:auto;margin:0 auto 8px}
+  .extract-foot{height:19px;width:auto;margin:0 auto 12px}
   footer a{color:var(--accent-dark)}
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <img class="herophoto" src="assets/hero.jpg" alt="" onerror="this.remove()">
+  <img class="herophoto" src="assets/hero.png" alt="" onerror="this.remove()">
   <div class="herotext">
-    <img class="extract-logo" src="assets/extract.svg" alt="Extract">
-    <h1>Síguenos, juega y gana</h1>
-    <p>Gana grandes premios.</p>
-    <a class="cta" href="#participar">Quiero participar →</a>
+    <img class="hlogo" src="assets/exotik.svg" alt="Exotik Nat">
+    <h1>Gana grandes premios</h1>
     <span class="evt">📍 Belleza Total · Guatemala 2026</span>
   </div>
 </header>
@@ -112,11 +112,11 @@
 <div class="wrap">
 
   <section id="participar">
-    <h2 class="sec">Participa y gana</h2>
+    <h2 class="sec">Cómo participar</h2>
     <div class="promo" id="card">
 
       <form id="leadForm" novalidate>
-        <h2>Gira la ruleta y gana</h2>
+        <h2>Completa y gira la ruleta</h2>
         <p class="lead">Completa estos pasos y al enviar girarás la ruleta para ganar tu premio.</p>
 
         <ol class="steps">
@@ -181,11 +181,10 @@
     </div>
   </section>
 
-  <section>
+  <section class="marcas">
     <button class="acc" id="marcasToggle">Conoce nuestras marcas <span class="arr">▾</span></button>
     <div class="brands" id="marcasPanel">
       <div class="brand">
-        <span class="bar"></span>
         <img class="logo" src="assets/exotik.svg" alt="Exotik Nat">
         <p>Aromaterapia (roll-on, mist, aceites esenciales y difusores), protección solar, repelente y cuidado corporal de origen natural.</p>
         <div class="btns">
@@ -194,13 +193,11 @@
         </div>
       </div>
       <div class="brand">
-        <span class="bar"></span>
         <img class="logo bb" src="assets/blackbull.svg" alt="Black Bull">
         <p>Barba, cabello y piel para hombres: aceites, bálsamos, pomadas y kits con aceites esenciales.</p>
         <div class="btns"><a class="btn solid" href="https://exotiknat.com/collections/black-bull" target="_blank" rel="noopener">Ver Black Bull</a></div>
       </div>
       <div class="brand">
-        <span class="bar"></span>
         <img class="logo ae" src="assets/aelha.svg" alt="Aelha">
         <p>Cuidado especializado de la piel tatuada: espuma, bálsamo y crema con FPS 30. Mantén vivo tu arte.</p>
         <div class="btns"><a class="btn solid" href="https://exotiknat.com/collections/aelha-care" target="_blank" rel="noopener">Ver Aelha</a></div>
@@ -209,12 +206,12 @@
   </section>
 
   <footer>
+    <img class="extract-foot" src="assets/extract-negro.svg" alt="Extract">
     <div class="footlogos">
       <img src="assets/exotik.svg" alt="Exotik Nat">
       <img src="assets/blackbull.svg" alt="Black Bull">
       <img src="assets/aelha.svg" alt="Aelha">
     </div>
-    <img class="extract-foot" src="assets/extract-negro.svg" alt="Extract">
     Promoción válida durante Belleza Total · Guatemala 2026. Sujeta a los términos del stand.<br>
     Una marca de Extract — <a href="https://www.cardamomoil.com/es/home" target="_blank" rel="noopener">cardamomoil.com</a>
   </footer>
